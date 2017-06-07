@@ -1,3 +1,4 @@
-var numFriend = require('./usedByRequire')
+var friends = require('./usedByRequire')
 
-numFriend(['john', 'mark', 'adam']);
+friends.friendNum(['john', 'mark', 'adam']);
+friends.friendList(['john', 'mark', 'adam']);
