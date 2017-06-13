@@ -1,0 +1,23 @@
+{
+  "name": "installationtracker",
+  "version": "1.0.0",
+  "description": "this file tracks all the installed files",
+  "main": "customEvent1.js",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nidhinarendra/learningNodeJs.git"
+  },
+  "author": "myself",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nidhinarendra/learningNodeJs/issues"
+  },
+  "homepage": "https://github.com/nidhinarendra/learningNodeJs#readme"
+}
