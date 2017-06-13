@@ -1,0 +1,31 @@
+<!doctype HTML>
+
+<head>
+  <title>Surprise!</title>
+  <style>
+body{
+  background: skyblue;
+  font-family:fantasy;
+  padding: 30px;
+}
+h1{
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-align: center;
+  font-size: 25px
+}
+p{
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Welcome to the profile of <%= person %></h1>
+  <p>You can view the photos and news feeds of <%= person %>   </p>
+  <p><strong>Age: </strong><%= data.Age %><br />
+  <strong>Sex: </strong><%= data.Sex %> <br /></p>
+</body>
