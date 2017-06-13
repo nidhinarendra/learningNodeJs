@@ -19,7 +19,7 @@ app.get('/contact', function(req,res){
 
 //id is a variable and can be replaced with anything.
 app.get('/profile/:id', function(req,res){
-  var details = {Age: 30, Sex: 'Female'}
+  var details = {Age: 30, Sex: 'Female', Hobbies: ['Fishing', 'cycling', 'Shopping']}
   res.render('profile', {person: req.params.id, data: details});
 })
 
