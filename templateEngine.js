@@ -10,11 +10,11 @@ app.set('view engine', 'ejs');
 //sendFile needs to be used to send a HTML file
 app.get('/', function(req,res){
   //res.send('This is the home page');
-  res.sendFile(__dirname + '/index.html');
+  res.render('home');
 })
 
 app.get('/contact', function(req,res){
-  res.sendFile(__dirname + '/contact.html');
+  res.render('contact');
 })
 
 //id is a variable and can be replaced with anything.
