@@ -23,7 +23,7 @@ app.get('/', function(req,res){
 })
 
 app.get('/contact', function(req,res){
-  res.render('contact');
+  res.render('contact', {qs: req.query});
 })
 
 //id is a variable and can be replaced with anything.
