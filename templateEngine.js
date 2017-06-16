@@ -46,12 +46,12 @@ app.post('/contact', urlencodedParser, function(req,res){
   var transporter = nodemailer.createTransport(smtpTransport({
     service: 'Gmail',
     auth: {
-      user: 'nidhi.narendra1@gmail.com',
-      pass: 'bestofthebests2616'
+      user: 'nidhi_bluebell@yahoo.co.in',
+      pass: '***'
     }
   }));
   var mailOptions = {
-    from: 'nidhi.narendra1@gmail.com>', // sender address
+    from: 'nidhi_bluebell@yahoo.co.in>', // sender address
     to: req.query.email, // list of receivers
     subject: 'Email Example', // Subject line
     text: 'Hi from node' //, // plaintext body
@@ -60,13 +60,14 @@ app.post('/contact', urlencodedParser, function(req,res){
 
 transporter.sendMail(mailOptions, function(error, info){
     if(error){
-        console.log(error);
+        console.log('There was a problem');
         res.json({yo: 'error'});
     }else{
         console.log('Message sent: ' + info.response);
         res.json({yo: info.response});
     };
 });
+res.writeHead(200, {'Content-Type': 'application/json'})
 
 })
 
