@@ -1,17 +1,10 @@
-var smtpTransport = require('nodemailer-smtp-transport');
 var express = require('express');
 
 //when we install the middleware body-parser, we need to require it here to use
 var bodyParser = require('body-parser');
 
-//to send a mail to a person from the form
-var nodemailer = require('nodemailer');
 
 var app = express();
-
-//Function required by the nodemailer
-//var router = express.Router();
-
 //this is the function which is required to parse the url to POST a req
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
@@ -43,6 +36,7 @@ app.get('/contact', function(req,res){
 
 app.post('/contact', urlencodedParser, function(req,res){
   res.render('contact-success', {data: req.body});
+  
   var transporter = nodemailer.createTransport(smtpTransport({
     service: 'Gmail',
     auth: {
@@ -68,6 +62,7 @@ transporter.sendMail(mailOptions, function(error, info){
     };
 });
 res.writeHead(200, {'Content-Type': 'application/json'})
+
 
 })
 
