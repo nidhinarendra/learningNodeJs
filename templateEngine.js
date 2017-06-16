@@ -36,7 +36,7 @@ app.get('/contact', function(req,res){
 
 app.post('/contact', urlencodedParser, function(req,res){
   res.render('contact-success', {data: req.body});
-  
+
   var transporter = nodemailer.createTransport(smtpTransport({
     service: 'Gmail',
     auth: {
@@ -62,7 +62,6 @@ transporter.sendMail(mailOptions, function(error, info){
     };
 });
 res.writeHead(200, {'Content-Type': 'application/json'})
-
 
 })
 
