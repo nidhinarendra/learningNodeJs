@@ -1,5 +1,13 @@
 var express = require('express');
+
+//when we install the middleware body-parser, we need to require it here to use
+var bodyParser = require('body-parser');
+
+
 var app = express();
+//this is the function which is required to parse the url to POST a req
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
 //we have installed ejs(embedded javascript) to embed a javascript into html page
 //to use its functionality, we need to tell express that the
 //viewing engine is gonna be ejs
@@ -24,6 +32,10 @@ app.get('/', function(req,res){
 
 app.get('/contact', function(req,res){
   res.render('contact', {qs: req.query});
+})
+
+app.post('/contact', urlencodedParser, function(req,res){
+  res.render('contact-success', {data: req.body});
 })
 
 //id is a variable and can be replaced with anything.
